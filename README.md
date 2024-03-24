@@ -5,11 +5,13 @@ Primeiro realizei o passo a passo de configurar o projeto para conectar com o pr
 
 A seguir estão as imagens do prometheus em execução e coletando métricas do projeto: 
 
-<img src="./Assets_ponderada/prometheusUP.png.png"></img>
+<img src="./Assets_ponderada/metrics.png"></img>
+
+<img src="./Assets_ponderada/prometheusUP.png"></img>
 
 Na primeira imagem, você mostra a seção "Targets" do Prometheus. Isso confirma que seu serviço net-backend está rodando e disponível para o Prometheus na porta 5244, com a rota /metrics. O estado "UP" significa que a (scrape) das métricas está funcionando corretamente, e o Prometheus foi capaz de coletar métricas deste endpoint.
 
-<img src="./Assets_ponderada/graph-prometheus.png.png"></img>
+<img src="./Assets_ponderada/graph-prometheus.png"></img>
 
 Na segunda imagem, há um gráfico do Prometheus exibindo uma métrica ao longo do tempo. As linhas verticais no gráfico indicam que houve variações na métrica que está sendo medida. 
 
@@ -19,11 +21,11 @@ Usando o Prometheus, configurei um monitoramento contínuo do serviço net-backe
 
 No grafana escolhi usar duas métricas diferentes para gerar o gráfico, "http_server_duration_ms_count", e gerou o gráfico que está na imagem a seguir
 
-<img src="./Assets_ponderada/graph-grafana1.png.png"></img>
+<img src="./Assets_ponderada/graph-grafana1.png"></img>
 
 E também utilizei a métrica, "greetings_count" e gerou o gráfico que está a seguir:
 
-<img src="./Assets_ponderada/graph-grafana2.png.png"></img>
+<img src="./Assets_ponderada/graph-grafana2.png"></img>
 
 Ambos geraram gráficos de barras que estão expondo as métricas do projeto. 
 
